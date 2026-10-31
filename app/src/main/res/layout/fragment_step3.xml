@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/screen_margin"
+            android:paddingBottom="@dimen/screen_margin">
+
+            <FrameLayout
+                android:id="@+id/avatar"
+                android:layout_width="136dp"
+                android:layout_height="136dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/add_photo">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:importantForAccessibility="no"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_avatar_placeholder"
+                    app:shapeAppearanceOverlay="@style/Shape.Circle" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_add_badge" />
+            </FrameLayout>
+
+            <TextView
+                style="@style/Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/photo_hint"
+                android:textSize="13sp" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="@string/license_number" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/Field">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLicense"
+                    style="@style/FieldEdit"
+                    android:hint="@string/license_number_hint"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="@string/issue_date" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilIssueDate"
+                style="@style/Field"
+                app:startIconContentDescription="@string/select_date"
+                app:startIconDrawable="@drawable/ic_calendar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etIssueDate"
+                    style="@style/FieldEdit"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:hint="@string/date_hint"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="@string/license_photo" />
+
+            <LinearLayout
+                android:id="@+id/licensePhoto"
+                style="@style/UploadRow">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivLicensePhoto"
+                    style="@style/UploadBox" />
+
+                <TextView
+                    style="@style/UploadText"
+                    android:text="@string/upload_photo" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="@string/passport_photo" />
+
+            <LinearLayout
+                android:id="@+id/passportPhoto"
+                style="@style/UploadRow">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivPassportPhoto"
+                    style="@style/UploadBox" />
+
+                <TextView
+                    style="@style/UploadText"
+                    android:text="@string/upload_photo" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        style="@style/Button"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/screen_margin"
+        android:layout_marginBottom="32dp"
+        android:text="@string/next"
+        android:textSize="14sp" />
+
+</LinearLayout>
