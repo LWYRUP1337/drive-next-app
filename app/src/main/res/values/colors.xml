@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#2A1246</color>
+    <color name="text_primary">#191919</color>
+    <color name="text_secondary">#4D4D4D</color>
+    <color name="text_label">#404040</color>
+    <color name="text_hint">#667085</color>
+    <color name="text_outlined_button">#344054</color>
+    <color name="stroke">#D0D5DD</color>
+    <color name="indicator_inactive">#E8EAEE</color>
+    <color name="icon_grey">#98A2B3</color>
+    <color name="error">#D92D20</color>
+</resources>

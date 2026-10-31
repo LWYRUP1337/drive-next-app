@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/tvSkip"
+        style="@style/Text.Link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:padding="12dp"
+        android:text="@string/skip"
+        android:textFontWeight="600"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
+
+    <LinearLayout
+        android:id="@+id/indicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/btnNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnNext">
+
+        <View
+            android:id="@+id/ind1"
+            android:layout_width="@dimen/indicator_active_width"
+            android:layout_height="8dp"
+            android:background="@drawable/indicator_active" />
+
+        <View
+            android:id="@+id/ind2"
+            android:layout_width="@dimen/indicator_width"
+            android:layout_height="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/indicator_inactive" />
+
+        <View
+            android:id="@+id/ind3"
+            android:layout_width="@dimen/indicator_width"
+            android:layout_height="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/indicator_inactive" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        style="@style/Button"
+        android:layout_width="132dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="36dp"
+        android:text="@string/next"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/guideBottom"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

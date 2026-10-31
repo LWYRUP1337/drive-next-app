@@ -1,0 +1,175 @@
+<resources>
+
+    <style name="Theme.MyApplication" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorError">@color/error</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <!-- Тема SplashScreen API: белый фон без иконки, сразу за ним идёт экран загрузки из макета -->
+    <style name="Theme.App.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="postSplashScreenTheme">@style/Theme.MyApplication</item>
+    </style>
+
+    <!-- Тексты -->
+    <style name="Text">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Text.AppName">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textFontWeight">600</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="Text.Slogan">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Text.Title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textFontWeight">600</item>
+    </style>
+
+    <style name="Text.ToolbarTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textFontWeight">600</item>
+    </style>
+
+    <style name="Text.Label">
+        <item name="android:textColor">@color/text_label</item>
+    </style>
+
+    <style name="Text.Link">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <style name="Text.FieldError">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/error</item>
+    </style>
+
+    <!-- Кнопки -->
+    <style name="Button" parent="Widget.Material3.Button">
+        <item name="android:layout_height">52dp</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="backgroundTint">@color/button_primary_bg</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_height">52dp</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="strokeColor">@color/stroke</item>
+        <item name="android:textColor">@color/text_outlined_button</item>
+    </style>
+
+    <!-- Поле ввода с рамкой; подпись к полю — отдельный TextView над ним -->
+    <style name="Field" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxStrokeColor">@color/field_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="startIconTint">@color/text_hint</item>
+        <item name="endIconTint">@color/icon_grey</item>
+        <item name="errorTextAppearance">@style/Text.FieldError</item>
+    </style>
+
+    <style name="FieldEdit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="FieldLabel" parent="Text.Label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="GenderRadio" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_hint</item>
+        <item name="buttonTint">@color/checkbox_tint</item>
+    </style>
+
+    <!-- Загрузка фото документа -->
+    <style name="UploadRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="UploadBox">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:src">@drawable/ic_upload</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:importantForAccessibility">no</item>
+        <item name="contentPadding">16dp</item>
+        <item name="strokeColor">@color/text_hint</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="shapeAppearanceOverlay">@style/Shape.Rounded</item>
+    </style>
+
+    <style name="UploadText" parent="Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:textColor">@color/text_hint</item>
+    </style>
+
+    <style name="Shape.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Shape.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+</resources>
