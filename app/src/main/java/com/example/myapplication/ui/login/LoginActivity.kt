@@ -29,7 +29,6 @@ class LoginActivity : AppCompatActivity() {
         val btnSignIn = findViewById<Button>(R.id.btnSignIn)
         val progress = findViewById<View>(R.id.progress)
 
-        // «Войти» активна, только когда заполнены все поля
         val updateButton = {
             btnSignIn.isEnabled = viewModel.canSignIn(etEmail.text.toString(), etPassword.text.toString())
         }

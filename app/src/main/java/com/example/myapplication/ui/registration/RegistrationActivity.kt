@@ -11,7 +11,6 @@ import com.example.myapplication.ui.common.RequestState
 import com.example.myapplication.ui.common.openAsRoot
 import com.example.myapplication.ui.common.showError
 
-// Контейнер для трёх шагов регистрации; «Назад» возвращает на предыдущий шаг
 class RegistrationActivity : AppCompatActivity() {
 
     private val viewModel: RegistrationViewModel by viewModels()

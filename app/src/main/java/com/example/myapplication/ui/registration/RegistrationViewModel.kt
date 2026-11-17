@@ -15,7 +15,6 @@ import kotlinx.coroutines.launch
 
 enum class PhotoTarget { AVATAR, LICENSE, PASSPORT }
 
-// Общая для трёх шагов регистрации: хранит введённые данные между экранами
 class RegistrationViewModel(app: Application) : AndroidViewModel(app) {
 
     private val repository = AuthRepository(app)
@@ -35,7 +34,6 @@ class RegistrationViewModel(app: Application) : AndroidViewModel(app) {
     private val _state = MutableLiveData<RequestState>(RequestState.Idle)
     val state: LiveData<RequestState> = _state
 
-    // Каждый submit возвращает текст ошибки или null, если шаг заполнен верно
     fun submitStep1(email: String, password: String, repeatPassword: String, agreed: Boolean): Int? {
         if (!Validator.isEmailValid(email)) return R.string.error_email
         if (password.isEmpty()) return R.string.error_required

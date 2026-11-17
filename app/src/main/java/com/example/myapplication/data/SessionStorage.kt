@@ -3,7 +3,6 @@ package com.example.myapplication.data
 import android.content.Context
 import androidx.core.content.edit
 
-// Локальное хранилище: пройден ли онбординг и access токен сессии
 class SessionStorage(context: Context) {
 
     private val prefs = context.getSharedPreferences("drive_next", Context.MODE_PRIVATE)
@@ -15,6 +14,11 @@ class SessionStorage(context: Context) {
     fun saveToken(accessToken: String, expiresAtMillis: Long) = prefs.edit {
         putString(KEY_TOKEN, accessToken)
         putLong(KEY_EXPIRES_AT, expiresAtMillis)
+    }
+
+    fun clearToken() = prefs.edit {
+        remove(KEY_TOKEN)
+        remove(KEY_EXPIRES_AT)
     }
 
     fun hasValidToken(): Boolean =

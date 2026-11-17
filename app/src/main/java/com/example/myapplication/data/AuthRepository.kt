@@ -25,7 +25,7 @@ class AuthRepository(private val context: Context) {
         saveSession()
     }
 
-    // Анкета пользователя сохраняется в метаданных аккаунта (таблица auth.users)
+
     suspend fun signUp(data: RegistrationData): Result<Unit> = request {
         SupabaseProvider.client.auth.signUpWith(Email) {
             email = data.email
@@ -48,7 +48,6 @@ class AuthRepository(private val context: Context) {
         storage.saveToken(session.accessToken, System.currentTimeMillis() + session.expiresIn * 1000)
     }
 
-    // Выполняет запрос и заменяет исключение понятным пользователю текстом
     private inline fun request(block: () -> Unit): Result<Unit> = try {
         block()
         Result.success(Unit)

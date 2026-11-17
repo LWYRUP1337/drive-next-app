@@ -83,4 +83,52 @@
     <string name="error_rate_limit">Слишком много попыток. Повторите позже.</string>
     <string name="error_network">Не удалось связаться с сервером. Проверьте подключение к интернету.</string>
     <string name="error_unknown">Что-то пошло не так. Повторите попытку.</string>
+    <string name="error_load_cars">Не удалось загрузить данные. Попробуйте снова.</string>
+    <string name="error_search">Не удалось выполнить поиск. Попробуйте снова.</string>
+
+    <string name="tab_home">Главная</string>
+    <string name="tab_favorites">Избранное</string>
+    <string name="tab_settings">Настройки</string>
+
+    <string name="search_hint">Введите марку автомобиля</string>
+    <string name="find_car">Давайте найдем автомобиль</string>
+    <string name="price_value">%1$d₽</string>
+    <string name="per_day">в день</string>
+    <string name="book">Забронировать</string>
+    <string name="details">Детали</string>
+    <string name="search_results">Результаты поиска</string>
+    <string name="nothing_found">Ничего не найдено</string>
+    <string name="favorites_empty">Здесь пока пусто</string>
+
+    <string name="settings">Настройки</string>
+    <string name="my_bookings">Мои бронирования</string>
+    <string name="theme">Тема</string>
+    <string name="notifications">Уведомления</string>
+    <string name="connect_car">Подключить свой автомобиль</string>
+    <string name="help">Помощь</string>
+    <string name="invite_friend">Пригласи друга</string>
+
+    <string name="profile">Профиль</string>
+    <string name="full_name">%1$s %2$s</string>
+    <string name="joined_male">Присоединился в %1$s %2$d</string>
+    <string name="joined_female">Присоединилась в %1$s %2$d</string>
+    <string name="change_password">Поменять пароль</string>
+    <string name="google">Google</string>
+    <string name="google_not_linked">Не подключён</string>
+    <string name="not_specified">Не указан</string>
+    <string name="sign_out">Выйти из профиля</string>
+    <string-array name="months_prepositional">
+        <item>январе</item>
+        <item>феврале</item>
+        <item>марте</item>
+        <item>апреле</item>
+        <item>мае</item>
+        <item>июне</item>
+        <item>июле</item>
+        <item>августе</item>
+        <item>сентябре</item>
+        <item>октябре</item>
+        <item>ноябре</item>
+        <item>декабре</item>
+    </string-array>
 </resources>

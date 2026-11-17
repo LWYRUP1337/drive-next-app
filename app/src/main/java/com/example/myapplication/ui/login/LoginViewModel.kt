@@ -20,7 +20,6 @@ class LoginViewModel(app: Application) : AndroidViewModel(app) {
 
     fun canSignIn(email: String, password: String) = email.isNotBlank() && password.isNotEmpty()
 
-    // Возвращает текст ошибки проверки полей или null, если запрос отправлен
     fun signIn(email: String, password: String): Int? {
         if (!Validator.isEmailValid(email)) return R.string.error_email
         _state.value = RequestState.Loading

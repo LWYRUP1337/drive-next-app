@@ -1,6 +1,5 @@
 package com.example.myapplication.ui.registration
 
-import android.graphics.ImageDecoder
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
@@ -14,6 +13,7 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.myapplication.R
+import com.example.myapplication.ui.common.loadBitmap
 import com.example.myapplication.ui.common.pickDate
 import com.example.myapplication.ui.common.showError
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -106,12 +106,7 @@ class Step3Fragment : Fragment(R.layout.fragment_step3) {
 
     private fun showPhoto(target: PhotoTarget, uri: Uri) {
         val imageView = photoViews.getValue(target)
-        // Уменьшаем фото при декодировании, чтобы большой снимок не занял всю память
-        val bitmap = runCatching {
-            ImageDecoder.decodeBitmap(ImageDecoder.createSource(requireContext().contentResolver, uri)) { decoder, info, _ ->
-                decoder.setTargetSampleSize(maxOf(1, maxOf(info.size.width, info.size.height) / 512))
-            }
-        }.getOrNull() ?: return
+        val bitmap = requireContext().loadBitmap(uri) ?: return
         imageView.setContentPadding(0, 0, 0, 0)
         imageView.scaleType = ImageView.ScaleType.CENTER_CROP
         imageView.setImageBitmap(bitmap)
